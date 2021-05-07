@@ -9,7 +9,7 @@ app.use(cors())
 app.use(morgan('combined'));
 
 app.get('/', (req, res) => {
-    res.send('welcome to my website!!!!');
+    res.send('welcome to my website');
 })
 
 app.listen(PORT, () => {
