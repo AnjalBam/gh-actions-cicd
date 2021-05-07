@@ -7,9 +7,10 @@ const PORT = 8080;
 
 app.use(cors())
 app.use(morgan('combined'));
+app.use(bodyParser.json({extended: true, urlEncoded: true}))
 
 app.get('/', (req, res) => {
-    res.send('welcome to my website');
+    res.send({'message': 'It works!!'});
 })
 
 app.listen(PORT, () => {
