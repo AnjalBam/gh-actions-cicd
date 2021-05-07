@@ -12,7 +12,7 @@ jobs:
         host: ${{ secrets.SERVER_IP }}
         username: ${{ secrets.SERVER_USERNAME }}
         key: ${{ secrets.SERVER_KEY }}
-        run: |
+        script: |
           cd gh-actions-cicd
           git pull
           export NVM_DIR="$HOME/.nvm"
