@@ -12,6 +12,6 @@ jobs:
               uses: a2m1/slim-ssh-action@master
               with: 
                 username: ${{secrets.SERVER_USERNAME}}
-                host: ${{secrets.SERVER_HOST}}
+                host: ${{secrets.SERVER_IP}}
                 key: ${{secrets.SERVER_KEY}
                 script: whoami
