@@ -44,5 +44,5 @@ jobs:
               with: 
                 username: ${{secrets.SERVER_USERNAME}}
                 host: ${{secrets.SERVER_IP}}
-                key: ${{secrets.SERVER_KEY}
+                key: ${{secrets.SERVER_KEY}}
                 script: whoami
