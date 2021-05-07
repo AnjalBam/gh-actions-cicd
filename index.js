@@ -13,6 +13,10 @@ app.get('/', (req, res) => {
     res.send({'message': 'It works!!'});
 })
 
+app.get('/user', (req, res) => {
+    res.send({name: 'AnjalBam', sex: 'Male', 'iAm': 'FullStackeveloper'})
+} )
+
 app.listen(PORT, () => {
     console.log(`Listening at http://localhost:${PORT}`);
 })
