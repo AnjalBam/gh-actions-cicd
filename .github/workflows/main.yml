@@ -12,4 +12,11 @@ jobs:
         host: ${{ secrets.SERVER_IP }}
         username: ${{ secrets.SERVER_USERNAME }}
         key: ${{ secrets.SERVER_KEY }}
-        script: ./deploy.sh
+        run: |
+          cd gh-actions-cicd
+          git pull
+          export NVM_DIR="$HOME/.nvm"
+          [-s "$NVM_DIR/nvm.sh"] && \. "$NVM_DIR/nvm.sh"
+          npm install
+          pm2 restart app
+          echo Completed
